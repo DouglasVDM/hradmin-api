@@ -27,3 +27,18 @@ git status
 ### Multiline commit message
 
 git commit index.js -m "Note the Changes" -m "- Fixed a bug"
+
+`---
+---
+# Postgresql
+---
+---
+
+## How start start stop PostgrSQL on Ubuntu
+
+```
+sudo systemctl stop postgresql
+sudo systemctl start postgresql
+sudo systemctl restart postgresql
+sudo systemctl status postgresql
+```

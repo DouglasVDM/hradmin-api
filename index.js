@@ -26,12 +26,23 @@ app.post("/departments", async (req, res) => {
 
 });
 
+// welcome message
+app.get("/", async (req, res) => {
+    try {
+        res.send("Hello World")
+
+    } catch (err) {
+        console.error(err.message);
+    }
+})
+
+
 // get all departments
 app.get("/departments", async (req, res) => {
     try {
         const allDepartments = await pool.query("SELECT * FROM departments");
         res.json(allDepartments.rows)
-        
+
     } catch (err) {
         console.error(err.message);
     }
